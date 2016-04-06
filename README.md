@@ -1,9 +1,9 @@
-# Designkit Sample
+# Designkit Buttons
 
 ## Install
 
 ```bash
-npm i designkit-*
+npm i designkit-buttons
 ```
 
 ## Usage

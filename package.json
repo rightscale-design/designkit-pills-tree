@@ -1,0 +1,35 @@
+{
+  "name": "designkit-buttons",
+  "version": "0.0.1",
+  "description": "Sass module for css buttons.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rightscale-design/designkit-buttons.git"
+  },
+  "author": {
+    "name": "Jason Melgoza",
+    "email": "jason@rightscale.com"
+  },
+  "files": [
+    "src",
+    "css"
+  ],
+  "keywords": [
+    "css",
+    "Sass"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/rightscale-design/designkit-buttons#readme",
+  "devDependencies": {
+    "bourbon": "^4.2.6",
+    "http-server": "^0.8.5",
+    "node-sass": "^3.4.2",
+    "nodemon": "^1.8.1"
+  },
+  "scripts": {
+    "build-css": "./bin/build-css",
+    "build-min": "./bin/build-min",
+    "watch-css": "./bin/watch-css",
+    "serve": "./bin/http-server"
+  }
+}
