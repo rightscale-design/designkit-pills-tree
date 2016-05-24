@@ -1,3 +1,5 @@
+// Mixins
+
 @mixin btn-border-color {
   border-color: rgba(#1e1e1e, 0.2)
                 rgba(#1e1e1e, 0.2)
@@ -27,6 +29,8 @@
               0 1px 1px rgba(#000, 0.15),
               inset 0 -20px 65px -40px rgba(#000, 0.9);
 }
+
+// Global
 
 .btn {
   position: relative;
@@ -92,6 +96,8 @@
     }
   }
 }
+
+// Default
 
 .btn-default {
   color: #57626c;
@@ -179,6 +185,8 @@
     }
   }
 }
+
+// Success
 
 .btn-success {
   color: #fff;
