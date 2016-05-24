@@ -100,11 +100,12 @@
 // Default
 
 .btn-default {
-  color: #57626c;
   background-color: #e2e4e6;
-  @include linear-gradient(#fff, #e2e4e6);
-  @include btn-border-color;
+  color: #57626c;
+
   @include btn-box-shadow;
+  @include btn-border-color;
+  @include linear-gradient(#fff, #e2e4e6);
   &:focus {
     @include btn-border-color;
   }
@@ -112,8 +113,9 @@
   &:hover,
   &:active {
     color: #57626c;
-    @include btn-border-color-hover;
+
     @include btn-box-shadow-hover;
+    @include btn-border-color-hover;
   }
 
   &:active {
@@ -124,16 +126,16 @@
   &.disabled {
     &,
     &:hover {
-      cursor: not-allowed;
+      border-color: rgba(#141414, 0.2);
       background-color: #0871d4;
       background-image: none;
-      border-color: rgba(#141414, 0.2);
       box-shadow: none;
       opacity: 0.65;
-
+      cursor: not-allowed;
     }
   }
 }
+
 
 .btn-primary {
   color: #fff;
@@ -189,50 +191,52 @@
 // Success
 
 .btn-success {
+  border-color: rgba(#1e1e1e, 0.2)
+  rgba(#1e1e1e, 0.2)
+  rgba(#000, 0.25);
+  background-color: #5fb000;
+  box-shadow: inset 0 1px 0 rgba(#fff, 0.25),
+  0 1px 1px rgba(#000, 0.15);
   color: #fff;
   text-shadow: none;
-  background-color: #5fb000;
+
   @include linear-gradient(#70cf00, #59a500);
-  border-color: rgba(#1e1e1e, 0.2)
-                rgba(#1e1e1e, 0.2)
-                rgba(#000, 0.25);
-  box-shadow: inset 0 1px 0 rgba(#fff, 0.25),
-              0 1px 1px rgba(#000, 0.15);
   &:focus {
     border-color: rgba(#1e1e1e, 0.2)
-                  rgba(#1e1e1e, 0.2)
-                  rgba(#000, 0.25);
+    rgba(#1e1e1e, 0.2)
+    rgba(#000, 0.25);
   }
 
   &:hover,
   &:active {
-    background-color: #5fb000;
-    @include linear-gradient(#6dca00, #4c8c00);
     border-color: rgba(#1e1e1e, 0.35)
-                  rgba(#1e1e1e, 0.35)
-                  rgba(#000, 0.4);
+    rgba(#1e1e1e, 0.35)
+    rgba(#000, 0.4);
+    background-color: #5fb000;
     box-shadow: inset 0 1px 0 rgba(#fff, 0.25),
-                0 1px 1px rgba(#000, 0.15),
-                inset 0 -20px 65px -40px rgba(#000, 0.9);
+    0 1px 1px rgba(#000, 0.15),
+    inset 0 -20px 65px -40px rgba(#000, 0.9);
+
+    @include linear-gradient(#6dca00, #4c8c00);
   }
 
   &:active {
     box-shadow: inset 0 1px 2px rgba(#000, 0.1),
-                inset 0 2px 3px rgba(#000, 0.25),
-                0 1px 1px rgba(#000, 0.15),
-                inset 0 -20px 65px -40px rgba(#000, 0.9);
+    inset 0 2px 3px rgba(#000, 0.25),
+    0 1px 1px rgba(#000, 0.15),
+    inset 0 -20px 65px -40px rgba(#000, 0.9);
   }
 
   &:disabled,
   &.disabled {
     &,
     &:hover {
-      cursor: not-allowed;
+      border-color: rgba(#141414, 0.2);
       background-color: #5fb000;
       background-image: none;
-      border-color: rgba(#141414, 0.2);
       box-shadow: none;
       opacity: 0.65;
+      cursor: not-allowed;
     }
   }
 }
