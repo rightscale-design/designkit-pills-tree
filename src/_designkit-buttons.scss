@@ -36,25 +36,27 @@
   position: relative;
   display: inline-block;
   padding: rem(6) rem(12);
-  font-size: 13px;
-  font-weight: bold;
-  line-height: 20px;
-  color: #444;
-  white-space: nowrap;
-  vertical-align: middle;
-  cursor: pointer;
-  user-select: none;
-  background-color: #eee;
-  @include linear-gradient(#fcfcfc, #eee);
   border: 1px solid #888;
   border-radius: 2px;
+  background-color: #eee;
+  color: #444;
+  vertical-align: middle;
+  text-shadow: none;
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 20px;
+  cursor: pointer;
+
   -webkit-appearance: none; // Corrects inability to style clickable `input` types in iOS.
-  @include transition(opacity .2s ease-out);
+  @include transition(opacity 0.2s ease-out);
+  @include linear-gradient(#fcfcfc, #eee);
+  user-select: none;
 
   &:focus {
-    text-decoration: none;
     // border-color: #51a7e8;
     outline: none;
+    text-decoration: none;
     // box-shadow: 0 0 5px rgba(81, 167, 232, 0.5);
   }
 
@@ -87,15 +89,38 @@
   &.disabled {
     &,
     &:hover {
+      // background-color: rgba(229, 229, 229, 0.5);
+      background-image: none;
+      // border-color: rgba(197, 197, 197, 0.5);
+      box-shadow: none;
+      opacity: 0.65;
       // color: rgba(102, 102, 102, 0.5);
       cursor: default;
-      // background-color: rgba(229, 229, 229, 0.5);
-      // background-image: none;
-      // border-color: rgba(197, 197, 197, 0.5);
-      // box-shadow: none;
+      cursor: not-allowed;
     }
   }
 }
+
+
+// Base theme
+
+.btn {
+  @include btn-border-color;
+  @include btn-box-shadow;
+  &:focus {
+    @include btn-border-color;
+  }
+  &:hover,
+  &:active {
+    @include btn-border-color-hover;
+    @include btn-box-shadow-hover;
+  }
+
+  &:active {
+    @include btn-box-shadow-active;
+  }
+}
+
 
 // Default
 
@@ -103,23 +128,11 @@
   background-color: #e2e4e6;
   color: #57626c;
 
-  @include btn-box-shadow;
-  @include btn-border-color;
   @include linear-gradient(#fff, #e2e4e6);
-  &:focus {
-    @include btn-border-color;
-  }
 
   &:hover,
   &:active {
     color: #57626c;
-
-    @include btn-box-shadow-hover;
-    @include btn-border-color-hover;
-  }
-
-  &:active {
-    @include btn-box-shadow-active;
   }
 
   &:disabled,
@@ -128,62 +141,33 @@
     &:hover {
       border-color: rgba(#141414, 0.2);
       background-color: #0871d4;
-      background-image: none;
-      box-shadow: none;
       opacity: 0.65;
       cursor: not-allowed;
     }
   }
 }
 
+// Primary
 
 .btn-primary {
-  color: #fff;
-  text-shadow: none;
   background-color: #0871d4;
+  color: #fff;
+
   @include linear-gradient(#0f86f6, #0871d4);
-  border-color: rgba(#1e1e1e, 0.2)
-                rgba(#1e1e1e, 0.2)
-                rgba(#000, 0.25);
-  box-shadow: inset 0 1px 0 rgba(#fff, 0.25),
-              0 1px 1px rgba(#000, 0.15);
-
-
-  &:focus {
-    border-color: rgba(#1e1e1e, 0.2)
-                  rgba(#1e1e1e, 0.2)
-                  rgba(#000, 0.25);
-  }
 
   &:hover,
   &:active {
     background-color: #0871d4;
-    @include linear-gradient(#0f86f6, #0871d4);
-    border-color: rgba(#1e1e1e, 0.35)
-                  rgba(#1e1e1e, 0.35)
-                  rgba(#000, 0.4);
-    box-shadow: inset 0 1px 0 rgba(#fff, 0.25),
-                0 1px 1px rgba(#000, 0.15),
-                inset 0 -20px 65px -40px rgba(#000, 0.9);
-  }
 
-  &:active {
-    box-shadow: inset 0 1px 2px rgba(#000, 0.1),
-                inset 0 2px 3px rgba(#000, 0.25),
-                0 1px 1px rgba(#000, 0.15),
-                inset 0 -20px 65px -40px rgba(#000, 0.9);
+    @include linear-gradient(#0f86f6, #0871d4);
   }
 
   &:disabled,
   &.disabled {
     &,
     &:hover {
-      cursor: not-allowed;
-      background-color: #0871d4;
-      background-image: none;
       border-color: rgba(#141414, 0.2);
-      box-shadow: none;
-      opacity: 0.65;
+      background-color: #0871d4;
     }
   }
 }
@@ -191,40 +175,16 @@
 // Success
 
 .btn-success {
-  border-color: rgba(#1e1e1e, 0.2)
-  rgba(#1e1e1e, 0.2)
-  rgba(#000, 0.25);
   background-color: #5fb000;
-  box-shadow: inset 0 1px 0 rgba(#fff, 0.25),
-  0 1px 1px rgba(#000, 0.15);
   color: #fff;
-  text-shadow: none;
 
   @include linear-gradient(#70cf00, #59a500);
-  &:focus {
-    border-color: rgba(#1e1e1e, 0.2)
-    rgba(#1e1e1e, 0.2)
-    rgba(#000, 0.25);
-  }
 
   &:hover,
   &:active {
-    border-color: rgba(#1e1e1e, 0.35)
-    rgba(#1e1e1e, 0.35)
-    rgba(#000, 0.4);
     background-color: #5fb000;
-    box-shadow: inset 0 1px 0 rgba(#fff, 0.25),
-    0 1px 1px rgba(#000, 0.15),
-    inset 0 -20px 65px -40px rgba(#000, 0.9);
 
     @include linear-gradient(#6dca00, #4c8c00);
-  }
-
-  &:active {
-    box-shadow: inset 0 1px 2px rgba(#000, 0.1),
-    inset 0 2px 3px rgba(#000, 0.25),
-    0 1px 1px rgba(#000, 0.15),
-    inset 0 -20px 65px -40px rgba(#000, 0.9);
   }
 
   &:disabled,
@@ -233,10 +193,30 @@
     &:hover {
       border-color: rgba(#141414, 0.2);
       background-color: #5fb000;
-      background-image: none;
-      box-shadow: none;
-      opacity: 0.65;
-      cursor: not-allowed;
+    }
+  }
+}
+
+// Danger
+
+.btn-danger {
+  background-color: #d82f2f;
+  color: #fff;
+
+  @include linear-gradient(#d82f2f, #b72323);
+
+  &:hover,
+  &:active {
+    background-color: #d82f2f;
+
+    @include linear-gradient(#d41414, #a60f0f);
+  }
+
+  &:disabled,
+  &.disabled {
+    &,
+    &:hover {
+      border-color: rgba(#141414, 0.2);
     }
   }
 }
