@@ -10,12 +10,16 @@
     "name": "Jason Melgoza",
     "email": "jason@rightscale.com"
   },
+  "main": "css/designkit-buttons.css",
+  "style": "css/designkit-buttons.css",
+  "scss": "src/index.scss",
   "files": [
     "src",
     "css"
   ],
   "keywords": [
     "css",
+    "scss",
     "Sass"
   ],
   "license": "MIT",
