@@ -1,3 +1,4 @@
 #!/bin/bash
 http-server \
-  -p 9000
+  -p 9000 \
+  -o

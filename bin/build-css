@@ -3,4 +3,5 @@ node-sass \
   --output-style expanded \
   --output css \
   --include-path node_modules/bourbon/app/assets/stylesheets \
+  --include-path node_modules/designkit-colors/src \
   src/index.scss css/designkit-buttons.css
