@@ -123,6 +123,14 @@
   }
 }
 
+// Sizes
+
+.btn {
+  &.btn-sm {
+    padding: rem(2) rem(10);
+  }
+}
+
 // Default
 
 .btn-default {

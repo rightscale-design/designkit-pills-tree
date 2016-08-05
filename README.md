@@ -10,6 +10,8 @@ npm i designkit-buttons
 
 ```html
 <button class="btn btn-default" type="button">Button</button>
+
+<a href="#" class="btn btn-default">Default Link</a>
 ```
 
 ## The CSS
@@ -78,6 +80,10 @@ npm i designkit-buttons
 
 .btn:active {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), inset 0 2px 3px rgba(0, 0, 0, 0.25), 0 1px 1px rgba(0, 0, 0, 0.15), inset 0 -20px 65px -40px rgba(0, 0, 0, 0.9);
+}
+
+.btn.btn-sm {
+  padding: 0.125rem 0.625rem;
 }
 
 .btn-default {
