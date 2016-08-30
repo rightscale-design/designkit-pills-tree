@@ -1,7 +1,0 @@
-#!/bin/bash
-node-sass \
-  --output-style compressed \
-  --output src \
-  --include-path node_modules/bourbon/app/assets/stylesheets \
-  --include-path node_modules/designkit-colors/src \
-  src/index.scss css/designkit-buttons.min.css
