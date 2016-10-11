@@ -43,6 +43,7 @@
   cursor: default;
   cursor: not-allowed;
   background-image: none;
+  border-color: rgba(20, 20, 20, 0.2);
   box-shadow: none;
   opacity: .65;
 }
@@ -82,10 +83,8 @@
 }
 
 .btn-default:disabled, .btn-default:disabled:hover, .btn-default.disabled, .btn-default.disabled:hover {
-  cursor: not-allowed;
-  background-color: #0871d4;
+  background-color: #e2e4e6;
   border-color: rgba(20, 20, 20, 0.2);
-  opacity: .65;
 }
 
 .btn-primary {
@@ -144,5 +143,6 @@
 }
 
 .btn-danger:disabled, .btn-danger:disabled:hover, .btn-danger.disabled, .btn-danger.disabled:hover {
+  background-color: #d82f2f;
   border-color: rgba(20, 20, 20, 0.2);
 }

@@ -1,5 +1,4 @@
 // Mixins
-
 @mixin btn-border-color {
   border-color: rgba(#1e1e1e, .2)
   rgba(#1e1e1e, .2)
@@ -30,9 +29,7 @@
   inset 0 -20px 65px -40px rgba(#000, .9);
 }
 
-
 // Global
-
 .btn {
   position: relative;
   display: inline-block;
@@ -56,56 +53,29 @@
   @include transition(opacity .2s ease-out);
 
   &:focus {
-    // border-color: #51a7e8;
     outline: none;
-    // box-shadow: 0 0 5px rgba(81, 167, 232, 0.5);
-  }
-
-  &:focus:hover,
-  &.selected:focus {
-    // border-color: #51a7e8;
   }
 
   &:hover,
   &:active {
     text-decoration: none;
-    // background-color: #ddd;
-    // background-image: linear-gradient(#eee, #ddd);
-    // border-color: #ccc;
-  }
-
-  &:active,
-  &.selected {
-    // background-color: #dcdcdc;
-    // background-image: none;
-    // border-color: #b5b5b5;
-    // box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
-  }
-
-  &.selected:hover {
-    // background-color: darken(#dcdcdc, 5%);
   }
 
   &:disabled,
   &.disabled {
     &,
     &:hover {
-      // color: rgba(102, 102, 102, 0.5);
       cursor: default;
       cursor: not-allowed;
-      // background-color: rgba(229, 229, 229, 0.5);
       background-image: none;
-      // border-color: rgba(197, 197, 197, 0.5);
+      border-color: rgba(#141414, .2);
       box-shadow: none;
       opacity: .65;
     }
   }
 }
 
-
-
 // Base theme
-
 .btn {
   @include btn-border-color;
   @include btn-box-shadow;
@@ -124,7 +94,6 @@
 }
 
 // Sizes
-
 .btn {
   &.btn-sm {
     padding: rem(2) rem(10);
@@ -132,7 +101,6 @@
 }
 
 // Default
-
 .btn-default {
   color: #57626c;
   background-color: #e2e4e6;
@@ -148,17 +116,13 @@
   &.disabled {
     &,
     &:hover {
-      cursor: not-allowed;
-      background-color: #0871d4;
+      background-color: #e2e4e6;
       border-color: rgba(#141414, .2);
-      opacity: .65;
     }
   }
 }
 
-
 // Primary
-
 .btn-primary {
   color: #fff;
   background-color: #0871d4;
@@ -182,10 +146,7 @@
   }
 }
 
-
-
 // Success
-
 .btn-success {
   color: #fff;
   background-color: #5fb000;
@@ -209,9 +170,7 @@
   }
 }
 
-
 // Danger
-
 .btn-danger {
   color: #fff;
   background-color: #d82f2f;
@@ -229,6 +188,7 @@
   &.disabled {
     &,
     &:hover {
+      background-color: #d82f2f;
       border-color: rgba(#141414, .2);
     }
   }
