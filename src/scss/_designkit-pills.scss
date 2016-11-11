@@ -1,0 +1,144 @@
+// Mixins
+@mixin i-generic {
+  background: url('generic.svg') no-repeat center center transparent;
+  background-size: 15px;
+}
+
+@mixin i-generic-white {
+  background: url('generic_white.svg') no-repeat center center transparent;
+  background-size: 15px;
+}
+
+
+
+// Global
+.simple_pill {
+  border-radius: 3px;
+  border: 1px solid $grey-border;
+  color: $text;
+  display: table;
+  font-size: 11px;
+  line-height: 1.7;
+  padding: 0 10px;
+}
+
+.thumb_pill {
+  @extend .simple_pill;
+  color: $text;
+  padding-left: 0;
+  position: relative;
+  i {
+    background-color: $grey-border;
+    display: block;
+    float: left;
+    height: 18px;
+    margin-right: 6px;
+    overflow: hidden;
+    width: 21px;
+    &:after, &:before {
+      content: '';
+      position: absolute;
+      width: inherit;
+      height: inherit;
+      top: 0;
+      left: 0;
+      background: no-repeat center center transparent;
+      @include transition(all .14s ease-in);
+    }
+    &:before {
+      top: -100%;
+    }
+    &:after {
+      @include i-generic-white;
+    }
+  }
+  &.add, &.remove, &.reassign {
+    &:hover {
+      cursor: pointer;
+      cursor: hand;
+      i:after {
+        top: 100%;
+      }
+    }
+  }
+  &.add {
+    &:hover, &.checked {
+      border-color: $blue;
+      i {
+        background-color: $blue;
+        &:before{
+          background: url('plus.svg') no-repeat center center transparent;
+          background-size: 11px;
+          top: 0
+        }
+        &:after {
+          top: 100%;
+        }
+      }
+    }
+  }
+  &.added {
+    border-color: $green;
+    i {
+      background-color: $green;
+      &:after {
+        @include i-generic-white;
+      }
+    }
+  }
+  &.selected {
+    border-color: $blue;
+    i {
+      background-color: $blue;
+      &:before {
+        @include i-generic-white;
+        top: 0
+      }
+      &:after {
+        background: none;
+      };
+    }
+  }
+  &.reassign {
+    &:hover, &.checked {
+      border-color: $blue;
+      i {
+        background-color: $blue;
+        &:before {
+          background: url('reassign_white.svg') no-repeat center center transparent;
+          background-size: 11px;
+          top: 0
+        }
+        &:after {
+          top: 100%;
+        }
+      }
+    }
+  }
+  &.remove  {
+    &:hover, &.checked {
+      border-color: $red;
+      i {
+        background-color: $red;
+        &:before{
+          background: url('minus.svg') no-repeat center center transparent;
+          background-size: 11px;
+          top: 0
+        };
+        &:after{
+          top: 100%;
+        };
+      }
+    }
+  }
+  &.w_checkbox {
+    padding-right: 30px;
+    position: relative;
+    @include display(flex);
+    .checkbox_wrap {
+      position: absolute;
+      right: -5px;
+      top: 50%;
+    }
+  }
+}

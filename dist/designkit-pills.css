@@ -1,30 +1,6 @@
-# Designkit Pills
-
-## Install
-
-```bash
-npm i designkit-pills
-```
-
-## Usage
-
-```html
-
-<div class="simple_pill">
-  <i></i>thumb pill
-</div>
-
-<div class="thumb_pill added remove">
-  <i></i>thumb pill
-</div>
-```
-
-## The CSS
-
-```css
 /*
 //
-// Designkit-Pills
+// Designkit-Buttons
 // --------------------------------------------------
 */
 .simple_pill, .thumb_pill {
@@ -32,9 +8,9 @@ npm i designkit-pills
   border: 1px solid #D1D6DC;
   color: #76899A;
   display: table;
-  font-size: 1.1rem;
+  font-size: 11px;
   line-height: 1.7;
-  padding: 0 1rem;
+  padding: 0 10px;
 }
 
 .thumb_pill {
@@ -47,10 +23,10 @@ npm i designkit-pills
   background-color: #D1D6DC;
   display: block;
   float: left;
-  height: 1.8rem;
-  margin-right: .6rem;
+  height: 18px;
+  margin-right: 6px;
   overflow: hidden;
-  width: 2.1rem;
+  width: 21px;
 }
 
 .thumb_pill i:after, .thumb_pill i:before {
@@ -62,7 +38,6 @@ npm i designkit-pills
   left: 0;
   background: no-repeat center center transparent;
   -webkit-transition: all 0.14s ease-in;
-  -moz-transition: all 0.14s ease-in;
   transition: all 0.14s ease-in;
 }
 
@@ -72,7 +47,7 @@ npm i designkit-pills
 
 .thumb_pill i:after {
   background: url("generic_white.svg") no-repeat center center transparent;
-  background-size: 1.5rem;
+  background-size: 15px;
 }
 
 .thumb_pill.add:hover, .thumb_pill.remove:hover, .thumb_pill.reassign:hover {
@@ -94,7 +69,7 @@ npm i designkit-pills
 
 .thumb_pill.add:hover i:before, .thumb_pill.add.checked i:before {
   background: url("plus.svg") no-repeat center center transparent;
-  background-size: 1.1rem;
+  background-size: 11px;
   top: 0;
 }
 
@@ -112,7 +87,7 @@ npm i designkit-pills
 
 .thumb_pill.added i:after {
   background: url("generic_white.svg") no-repeat center center transparent;
-  background-size: 1.5rem;
+  background-size: 15px;
 }
 
 .thumb_pill.selected {
@@ -125,7 +100,7 @@ npm i designkit-pills
 
 .thumb_pill.selected i:before {
   background: url("generic_white.svg") no-repeat center center transparent;
-  background-size: 1.5rem;
+  background-size: 15px;
   top: 0;
 }
 
@@ -143,7 +118,7 @@ npm i designkit-pills
 
 .thumb_pill.reassign:hover i:before, .thumb_pill.reassign.checked i:before {
   background: url("reassign_white.svg") no-repeat center center transparent;
-  background-size: 1.1rem;
+  background-size: 11px;
   top: 0;
 }
 
@@ -161,7 +136,7 @@ npm i designkit-pills
 
 .thumb_pill.remove:hover i:before, .thumb_pill.remove.checked i:before {
   background: url("minus.svg") no-repeat center center transparent;
-  background-size: 1.1rem;
+  background-size: 11px;
   top: 0;
 }
 
@@ -170,12 +145,11 @@ npm i designkit-pills
 }
 
 .thumb_pill.w_checkbox {
-  padding-right: 3rem;
+  padding-right: 30px;
   position: relative;
   display: -webkit-box;
   display: -moz-box;
   display: box;
-  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
@@ -183,35 +157,6 @@ npm i designkit-pills
 
 .thumb_pill.w_checkbox .checkbox_wrap {
   position: absolute;
-  right: -.5rem;
+  right: -5px;
   top: 50%;
 }
-```
-
-## Author
-
-Artur Janas
-
-## License
-
-The MIT License (MIT)
-
-Copyright (c) 2016 RightScale
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.

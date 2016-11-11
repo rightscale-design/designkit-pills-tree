@@ -1,17 +1,17 @@
 {
-  "name": "designkit-buttons",
+  "name": "designkit-pills",
   "version": "0.0.4",
-  "description": "Sass module for css buttons.",
+  "description": "Sass module for css pills.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rightscale-design/designkit-buttons.git"
+    "url": "git+https://github.com/rightscale-design/designkit-pills.git"
   },
   "author": {
     "name": "Jason Melgoza",
     "email": "jason@rightscale.com"
   },
-  "main": "css/designkit-buttons.css",
-  "style": "css/designkit-buttons.css",
+  "main": "css/designkit-pills.css",
+  "style": "css/designkit-pills.css",
   "scss": "src/index.scss",
   "files": [
     "src",
@@ -23,7 +23,7 @@
     "Sass"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/rightscale-design/designkit-buttons#readme",
+  "homepage": "https://github.com/rightscale-design/designkit-pills#readme",
   "devDependencies": {
     "autoprefixer": "^6.4.0",
     "bourbon": "^4.2.7",
@@ -40,8 +40,8 @@
     "serve": "http-server -p 9000 -o",
     "watch": "nodemon -e scss -x 'npm run build:all'",
     "build:scss": "./bin/scss",
-    "build:prefix": "postcss -u autoprefixer -b 'last 2 versions' < src/css/_designkit-buttons.css > dist/designkit-buttons.css",
-    "build:minify": "cleancss -o dist/designkit-buttons.min.css dist/designkit-buttons.css",
+    "build:prefix": "postcss -u autoprefixer -b 'last 2 versions' < src/css/_designkit-pills.css > dist/designkit-pills.css",
+    "build:minify": "cleancss -o dist/designkit-pills.min.css dist/designkit-pills.css",
     "build:all": "npm run build:scss && npm run build:prefix && npm run build:minify",
     "build:serve": "run-p watch serve"
   }
