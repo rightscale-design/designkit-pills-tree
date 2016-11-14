@@ -4,4 +4,6 @@ node-sass \
   --output css \
   --include-path node_modules/bourbon/app/assets/stylesheets \
   --include-path node_modules/designkit-colors/src \
-  src/scss/index.scss src/css/_designkit-pills.css
+  --include-path node_modules/designkit-pills/src/css \
+  --include-path node_modules/designkit-pills-tree/src/css \
+  src/scss/index.scss src/css/_designkit-pills-tree.css

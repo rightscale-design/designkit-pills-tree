@@ -1,9 +1,9 @@
-# Designkit Pills
+# Designkit Pills Tree
 
 ## Install
 
 ```bash
-npm i designkit-pills
+npm i designkit-pills-tree
 ```
 
 ## Usage
@@ -11,12 +11,22 @@ npm i designkit-pills
 ```html
 
 <div class="simple_pill">
-  <i></i>thumb pill
+  <i></i>simple pill
+</div>
+<div class="sub_link">
+  <ul>
+    <li class="simple_pill">
+      <i></i>simple pill
+    </li>
+    <li class="simple_pill">
+      <i></i>simple pill
+    </li>
+    <li class="simple_pill">
+      <i></i>simple pill
+    </li>
+  </ul>
 </div>
 
-<div class="thumb_pill added remove">
-  <i></i>thumb pill
-</div>
 ```
 
 ## The CSS
@@ -24,168 +34,55 @@ npm i designkit-pills
 ```css
 /*
 //
-// Designkit-Pills
+// designkit-pills-tree
 // --------------------------------------------------
 */
-.simple_pill, .thumb_pill {
-  border-radius: 3px;
-  border: 1px solid #D1D6DC;
-  color: #76899A;
-  display: table;
-  font-size: 1.1rem;
-  line-height: 1.7;
-  padding: 0 1rem;
-}
-
-.thumb_pill {
-  color: #76899A;
-  padding-left: 0;
+.sub_link {
+  margin-left: 22px;
   position: relative;
 }
 
-.thumb_pill i {
-  background-color: #D1D6DC;
-  display: block;
-  float: left;
-  height: 1.8rem;
-  margin-right: .6rem;
-  overflow: hidden;
-  width: 2.1rem;
-}
-
-.thumb_pill i:after, .thumb_pill i:before {
-  content: '';
-  position: absolute;
-  width: inherit;
-  height: inherit;
-  top: 0;
+.sub_link:before, .sub_link:after {
+  background: #80C11A;
+  content: "";
+  height: 21px;
   left: 0;
-  background: no-repeat center center transparent;
-  -webkit-transition: all 0.14s ease-in;
-  -moz-transition: all 0.14s ease-in;
-  transition: all 0.14s ease-in;
-}
-
-.thumb_pill i:before {
-  top: -100%;
-}
-
-.thumb_pill i:after {
-  background: url("generic_white.svg") no-repeat center center transparent;
-  background-size: 1.5rem;
-}
-
-.thumb_pill.add:hover, .thumb_pill.remove:hover, .thumb_pill.reassign:hover {
-  cursor: pointer;
-  cursor: hand;
-}
-
-.thumb_pill.add:hover i:after, .thumb_pill.remove:hover i:after, .thumb_pill.reassign:hover i:after {
-  top: 100%;
-}
-
-.thumb_pill.add:hover, .thumb_pill.add.checked {
-  border-color: #0A83F6;
-}
-
-.thumb_pill.add:hover i, .thumb_pill.add.checked i {
-  background-color: #0A83F6;
-}
-
-.thumb_pill.add:hover i:before, .thumb_pill.add.checked i:before {
-  background: url("plus.svg") no-repeat center center transparent;
-  background-size: 1.1rem;
-  top: 0;
-}
-
-.thumb_pill.add:hover i:after, .thumb_pill.add.checked i:after {
-  top: 100%;
-}
-
-.thumb_pill.added {
-  border-color: #80C11A;
-}
-
-.thumb_pill.added i {
-  background-color: #80C11A;
-}
-
-.thumb_pill.added i:after {
-  background: url("generic_white.svg") no-repeat center center transparent;
-  background-size: 1.5rem;
-}
-
-.thumb_pill.selected {
-  border-color: #0A83F6;
-}
-
-.thumb_pill.selected i {
-  background-color: #0A83F6;
-}
-
-.thumb_pill.selected i:before {
-  background: url("generic_white.svg") no-repeat center center transparent;
-  background-size: 1.5rem;
-  top: 0;
-}
-
-.thumb_pill.selected i:after {
-  background: none;
-}
-
-.thumb_pill.reassign:hover, .thumb_pill.reassign.checked {
-  border-color: #0A83F6;
-}
-
-.thumb_pill.reassign:hover i, .thumb_pill.reassign.checked i {
-  background-color: #0A83F6;
-}
-
-.thumb_pill.reassign:hover i:before, .thumb_pill.reassign.checked i:before {
-  background: url("reassign_white.svg") no-repeat center center transparent;
-  background-size: 1.1rem;
-  top: 0;
-}
-
-.thumb_pill.reassign:hover i:after, .thumb_pill.reassign.checked i:after {
-  top: 100%;
-}
-
-.thumb_pill.remove:hover, .thumb_pill.remove.checked {
-  border-color: #C32525;
-}
-
-.thumb_pill.remove:hover i, .thumb_pill.remove.checked i {
-  background-color: #C32525;
-}
-
-.thumb_pill.remove:hover i:before, .thumb_pill.remove.checked i:before {
-  background: url("minus.svg") no-repeat center center transparent;
-  background-size: 1.1rem;
-  top: 0;
-}
-
-.thumb_pill.remove:hover i:after, .thumb_pill.remove.checked i:after {
-  top: 100%;
-}
-
-.thumb_pill.w_checkbox {
-  padding-right: 3rem;
-  position: relative;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.thumb_pill.w_checkbox .checkbox_wrap {
   position: absolute;
-  right: -.5rem;
-  top: 50%;
+  top: 0;
+  width: 1px;
 }
+
+.sub_link:after {
+  top: 6px;
+  height: calc(100% - 15px);
+}
+
+.sub_link.w_checkbox:after {
+  height: calc(100% - 20px);
+}
+
+.sub_link ul {
+  margin: 0px 0 0 6px;
+  padding: 10px 0 0 0;
+}
+
+.sub_link li {
+  display: inline-table;
+  margin-left: 15px;
+  margin-right: 0;
+  position: relative;
+}
+
+.sub_link li:before {
+  background: #80C11A;
+  content: "";
+  height: 1px;
+  left: -21px;
+  position: absolute;
+  top: 50%;
+  width: 20px;
+}
+
 ```
 
 ## Author

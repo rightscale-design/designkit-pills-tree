@@ -1,5 +1,10 @@
 /*
 //
+// Designkit-Pills-Tree
+// --------------------------------------------------
+*/
+/*
+//
 // Designkit-Buttons
 // --------------------------------------------------
 */
@@ -38,6 +43,7 @@
   left: 0;
   background: no-repeat center center transparent;
   -webkit-transition: all 0.14s ease-in;
+  -moz-transition: all 0.14s ease-in;
   transition: all 0.14s ease-in;
 }
 
@@ -150,6 +156,7 @@
   display: -webkit-box;
   display: -moz-box;
   display: box;
+  display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
@@ -159,4 +166,50 @@
   position: absolute;
   right: -5px;
   top: 50%;
+}
+
+.sub_link {
+  margin-left: 22px;
+  position: relative;
+}
+
+.sub_link:before, .sub_link:after {
+  background: #80C11A;
+  content: "";
+  height: 21px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+
+.sub_link:after {
+  top: 6px;
+  height: calc(100% - 15px);
+}
+
+.sub_link.w_checkbox:after {
+  height: calc(100% - 20px);
+}
+
+.sub_link ul {
+  margin: 0px 0 0 6px;
+  padding: 10px 0 0 0;
+}
+
+.sub_link li {
+  display: inline-table;
+  margin-left: 15px;
+  margin-right: 0;
+  position: relative;
+}
+
+.sub_link li:before {
+  background: #80C11A;
+  content: "";
+  height: 1px;
+  left: -21px;
+  position: absolute;
+  top: 50%;
+  width: 20px;
 }

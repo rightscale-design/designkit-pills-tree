@@ -1,0 +1,41 @@
+// Global
+
+.sub_link {
+  margin-left: 22px;
+  position: relative;
+  &:before, &:after {
+    background: $green;
+    content: "";
+    height: 21px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1px;
+  }
+  &:after {
+    top: 6px;
+    height: calc(100% - 15px);
+  }
+  &.w_checkbox:after {
+    height: calc(100% - 20px);
+  }
+  ul {
+    margin: 0px 0 0 6px;
+    padding: 10px 0 0 0;
+  }
+  li {
+    display: inline-table;
+    margin-left: 15px;
+    margin-right: 0;
+    position: relative;
+    &:before {
+      background: $green;
+      content: "";
+      height: 1px;
+      left: -21px;
+      position: absolute;
+      top: 50%;
+      width: 20px;
+    }
+  }
+}
